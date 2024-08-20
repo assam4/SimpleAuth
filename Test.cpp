@@ -64,7 +64,7 @@
 		while (!reg.repeat_password())
 		{ /* repeat until match */
 		}
-		reg.set_secret_world();
+		reg.set_secret_word();
 		auto newuser = reg.get_new_account();
 		auto json = makeJson(newuser);
 		list.push_back(json);
