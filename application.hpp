@@ -65,7 +65,7 @@ public :
 			} while (true);
 		};
 		bool repeat_password(std::ostream& out = std::cout, std::istream& in = std::cin);
-		void set_secret_world(std::ostream& out = std::cout, std::istream& in = std::cin) ;
+		void set_secret_word(std::ostream& out = std::cout, std::istream& in = std::cin) ;
 		inline Account get_new_account() const noexcept { return m_new_user; }
 private :
 	Account m_new_user;
