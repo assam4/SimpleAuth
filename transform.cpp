@@ -4,7 +4,7 @@
 std::string Code::operator()(const std::string& data) //  Using random generated cooefficient and one static coefficient for coding data , to garanted security
 {
 	m_inputCoefficient = data.size();
-	std::random_device  generator;;
+	std::random_device  generator;
 	std::uniform_int_distribution<> range(1, m_inputCoefficient);
 	m_calculatedCoefficient = m_inputCoefficient % range(generator);
 	std::string coded_data;
