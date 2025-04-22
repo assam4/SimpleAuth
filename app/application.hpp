@@ -36,7 +36,7 @@ public:
 		{
 			out << COM_COLOR << "Enter Username: " << DEF_COLOR;
 			in.clear();
-			in >> data;
+			std::getline(in, data);
 			if (data.empty())
 			{
 				out << WARNING_COLOR << "Input empty.Try again!." << DEF_COLOR << std::endl;
@@ -68,7 +68,7 @@ public:
 		{
 			out << COM_COLOR << "Enter password: " << DEF_COLOR;
 			in.clear();
-			in >> password;
+			std::getline(in, password);
 			if (password_criteri(password))
 			{
 				m_new_user.change_password(password);
@@ -117,12 +117,12 @@ public :
 
 		out << COM_COLOR << "Enter secret word: " << DEF_COLOR;
 		in.clear();
-		in >> data;
+		std::getline(in, data);
 		if (m_user.check_word(data))
 		{
 			out << OK_COLOR << "\nGood! Now please enter new password:"  << DEF_COLOR;
 			in.clear();
-			in >> data;
+			std::getline(in, data);
 			if (password_criteri(data))
 				return (m_user.change_password(data), true);
 			else
@@ -148,7 +148,7 @@ public :
 		{
 			out << COM_COLOR << "Enter new password: " << DEF_COLOR;
 			in.clear();
-			in >> data;
+			std::getline(in, data);
 			if (password_criteri(data))
 				return (m_user.change_password(data), true);
 			else

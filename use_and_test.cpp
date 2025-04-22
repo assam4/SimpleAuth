@@ -104,9 +104,9 @@ bool	testing_login(container& list)
 	}
 	else
 		return (false);
-	std::cout << COM_COLOR << "MENU\n"
-			<< "'1' - to change secret word\n"
-			<< "'2' - to change password "
+	std::cout << COM_COLOR << "Attempts end!.You can reset password by\n"
+			<< "'1' - with secret word\n"
+			<< "'2' - with password(last)"
 			<< std::endl;
 	int choice{START_VAL};
 	std::cin.clear();
