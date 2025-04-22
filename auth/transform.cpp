@@ -63,7 +63,7 @@ Account	deserializeFromJson(const json& data)
 	return (Account(username, password, secret_word));
 }
 
-std::function<bool(const std::string&)> default_criteri = [] (const std::string& sample) -> bool const
+std::function<bool(const std::string&)> default_criteri = [] (const std::string& sample) -> bool
 {
 	if (PASSWD_MIN_LEN > sample.size())
 		return (false);

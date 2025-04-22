@@ -1,6 +1,6 @@
 NAME = authentication
 CXX = g++
-CXXFLAGS = -std=c++20 #-Wall -Wextra -Werror
+CXXFLAGS = -std=c++20 -Wall -Wextra -Werror
 
 AUTH_DIR = ./auth/
 APP_DIR = ./app/
@@ -24,6 +24,6 @@ clean:
 fclean: clean
 	rm -f $(NAME)
 
-re: make all
+re: fclean all
 
 .PHONY: all clean fclean re

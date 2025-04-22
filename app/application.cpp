@@ -17,7 +17,9 @@ void	Registration::set_secret_word(std::ostream& out, std::istream& in)
 	std::string data;
 	out << COM_COLOR << "Choose your secret word: " << DEF_COLOR;
 	in.clear();
-	in >> data;
-	if (data.empty()) data = DEFAULT_WORD;
+	in.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+	std::getline(in, data);
+	if (data.empty())
+		data = DEFAULT_WORD;
 	m_new_user.change_word(data);
 }

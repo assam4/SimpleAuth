@@ -7,9 +7,9 @@ bool	testing_codedecode(void)
 	auto		coeff_2 = toCode.get_CalcCoeff();
 	toDecode.set_CalcCoeff(coeff_2);
 	auto		decoded_data = toDecode(coded_data);
-	std::cout << "Original Data : " << name << '\n' 
-					<< "Coded Data: " << coded_data << '\n' 
-					<< "Decoded Data: " << decoded_data  << std::endl;
+	std::cout << "Original Data:[ "<< name << "]\n" 
+		<< "Coded Data:[" << coded_data <<  "]\n"
+		<< "Decoded Data:[" << decoded_data  << "]" << std::endl;
 	if (name == decoded_data)
 		return (true);
 	else
@@ -20,10 +20,10 @@ bool	testing_formatetransforms(void)
 {
 	Account		test("Maria", "mypasswordisatoeasy", "Donalds");
 	auto		format_json = makeJson(test);
-	std::cout << "Formated data : "
-		<< " username [ " << format_json[USERNAME] << " ]"
-		<< " password [ " << format_json[PASSWORD] << " ]"
-		<< " secretword [ " << format_json[SECRET_WORD] << " ]"
+	std::cout << "Formated data:\n"
+		<< " username [ " << format_json[USERNAME] << " ]\n"
+		<< " password [ " << format_json[PASSWORD] << " ]\n"
+		<< " secretword [ " << format_json[SECRET_WORD] << " ]\n"
 		<< std::endl;
 	Account		result = deserializeFromJson(format_json);
 	std::cout << "Deformated data : " << " username " << result.get_username()

@@ -120,7 +120,7 @@ public :
 		in >> data;
 		if (m_user.check_word(data))
 		{
-			out << OK_COLOR << "\nGood! Now please enter new password:" << std::endl;
+			out << OK_COLOR << "\nGood! Now please enter new password:"  << DEF_COLOR;
 			in.clear();
 			in >> data;
 			if (password_criteri(data))
