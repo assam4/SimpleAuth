@@ -1,5 +1,6 @@
-# Temp fils
+# Temp files && readme
 *.swp
+*.md
 
 # Prerequisites
 *.d
