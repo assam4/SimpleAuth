@@ -65,6 +65,6 @@ static Decode toDecode;
 
 using json = nlohmann::json;
 
-json	makeJson(const Account& );
-Account	deserializeFromJson(const json&);
+extern json	makeJson(const Account& );
+extern Account	deserializeFromJson(const json&);
 extern std::function<bool(const std::string&)> default_criteri;
