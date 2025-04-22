@@ -35,7 +35,13 @@ For correct operation you must install the json package if you don't have it.
   ````
 
 You need a C++20-compatible compiler (e.g., `g++-10` or later).
+ 
+  ````bash
+  gcc -v
+  gcc --version
+  ````
 
+Finally you can run and test the program
   ```bash
   make
   ./authentication
